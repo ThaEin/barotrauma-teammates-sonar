@@ -1,3 +1,4 @@
+if SERVER then return end
 
 AutoSonarbeacon = {};
 AutoSonarbeacon.Path = ...;
