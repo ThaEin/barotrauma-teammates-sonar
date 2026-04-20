@@ -26,7 +26,7 @@ end
 
 
 local function UnsetKbHook()
-    Hook.Remove("think", "ItemFinderMod.GetNewKeybind");
+    Hook.Remove("think", "KeybindLib.GetNewKeybind");
 end
 
 function KeybindLib.GetNewKeybind(callback)

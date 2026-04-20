@@ -1,4 +1,4 @@
-local Hsx = dofile(ItemFinderMod.Path .. "/Lua/Lib/Hsx.lua");
+local Hsx = dofile(AutoSonarbeacon.Path .. "/Lua/Lib/Hsx.lua");
 
 AutoSonarbeacon.Config = AutoSonarbeacon.ConfigLib.Load();
 local Config = AutoSonarbeacon.Config;
