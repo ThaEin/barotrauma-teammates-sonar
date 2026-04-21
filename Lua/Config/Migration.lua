@@ -1,13 +1,15 @@
 
--- local function V2(config)
--- 	config.version = "2";
+local function V2(config)
+	config.version = "2";
 
--- 	return config;
--- end
+	config.ExcludeOwnSub = true;
+
+	return config;
+end
 
 local function DoMigrations(config)
 	local migrations = {
-		-- ["1"] = V2,
+		["1"] = V2,
 	}
 
 	local migrated = false;

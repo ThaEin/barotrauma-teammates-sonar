@@ -10,7 +10,7 @@ end
 local function CreateFrame(onCloseButton)
     GUI.GUI.PauseMenu.RemoveChild(GUI.GUI.PauseMenu.GetChild(Int32(1)));
 
-    local mainFrame = GUI.Frame(GUI.RectTransform(Vector2(0.25, 0.3), GUI.GUI.PauseMenu.RectTransform, GUI.Anchor.Center));
+    local mainFrame = GUI.Frame(GUI.RectTransform(Vector2(0.25, 0.4), GUI.GUI.PauseMenu.RectTransform, GUI.Anchor.Center));
 
     local innerFrame = GUI.LayoutGroup(GUI.RectTransform(Vector2(0.9, 0.75), mainFrame.RectTransform, GUI.Anchor.TopCenter));
     innerFrame.RectTransform.RelativeOffset = Vector2(0, 0.1);
@@ -155,6 +155,7 @@ return function ()
     CreateTickBox(frame, "UnlimitedRange", "Unlimited range (like mission marker)");
     CreateTickBox(frame, "DisableIfSonarBeaconActive", "Disable if sonar beacon active");
     CreateTickBox(frame, "OnlyOutside", "Show only in open water");
+    CreateTickBox(frame, "ExcludeOwnSub", "Hide marker in own submarine");
 
     CreateColorPickerRow(frame, "TeammatesColor", "Teammates marker color");
     CreateColorPickerRow(frame, "OtherColor", "Other marker color");

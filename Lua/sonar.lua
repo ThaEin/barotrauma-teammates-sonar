@@ -49,7 +49,7 @@ local function DrawSonar_After(instance, ptable)
                 isSonarBeaconActive = component.SerializableProperties[Identifier("IsOn")].GetValue(component);
             end
 
-            local markerActive = not inSub and char.ID ~= LocalPlayerChar.ID
+            local markerActive = char.ID ~= LocalPlayerChar.ID
 
             -- checks according to config
             if markerActive and Config.OnlyOutside then
@@ -58,6 +58,10 @@ local function DrawSonar_After(instance, ptable)
 
             if markerActive and Config.OnlyTeammates then
                 markerActive = isTeammate;
+            end
+
+            if markerActive and Config.ExcludeOwnSub then
+                markerActive = not inSub;
             end
 
             if markerActive and not Config.UnlimitedRange then
